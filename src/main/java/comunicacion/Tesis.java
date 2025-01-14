@@ -56,15 +56,13 @@ public class Tesis extends Escrito {
 
     @Override
     public String toString() {
-        return getOrigen() + "\n" +
-               getTitulo() + "\n" +
-               getAutor() + "\n" +
-               getPaginas() + "\n" +
-               idea + "\n" +
-               String.join(", ", argumentos) + "\n" +
-               conclusion + "\n" +
-               referencias;
-    }
+        ublic String toString() {
+            return getOrigen() + "\n" +
+                   getTitulo() + "\n" +
+                   getAutor() + "\n" +
+                   getPaginas() + "\n" +
+                   "Factor: 5";  // Factor specific to Tesis class
+        }
     
     @Override
     public String interpretacion() {
