@@ -1,5 +1,7 @@
 package comunicacion;
 
+import comunicacion.Escrito;
+
 public class Tesis extends Escrito {
     private String idea;
     private String[] argumentos;
@@ -29,7 +31,7 @@ public class Tesis extends Escrito {
     }
 
     public void setArgumentos(String[] argumentos) {
-        this.argumentos = argumentos;
+        this.argumentos = argumentos != null ? argumentos : new String[0];
     }
 
     public String getConclusion() {
@@ -59,11 +61,11 @@ public class Tesis extends Escrito {
     }
 
     public int cantidadArgumentos() {
-        return argumentos.length;
+        return argumentos != null ? argumentos.length : 0;
     }
 
     @Override
     public String toString() {
-        return super.getTitulo() + "\n" + super.getAutor() + "\n" + super.getPaginas() + "\n" + super.Resumen() + "\n" + idea + "\n" + conclusion + "\n" + referencias;
+        return super.getTitulo() + "\n" + super.getAutor() + "\n" + super.getPaginas() + "\n" + super.resumen() + "\n" + idea + "\n" + conclusion + "\n" + referencias;
     }
 }
