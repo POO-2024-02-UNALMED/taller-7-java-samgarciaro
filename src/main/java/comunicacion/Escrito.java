@@ -5,6 +5,7 @@ public abstract class Escrito extends Pictograma{
 	private String titulo;
 	private String autor;
 	private int paginas;
+	private String resumen
 	public Escrito(String origen, String titulo, String autor, int paginas, String resumen) {
 		super(origen);
 		this.titulo = titulo;
