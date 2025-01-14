@@ -1,26 +1,15 @@
 package comunicacion;
-
 public abstract class Escrito extends Pictograma{
 	
 	private String titulo;
 	private String autor;
 	private int paginas;
-	private String resumen;
-	public Escrito(String origen, String titulo, String autor, int paginas, String resumen) {
+	public Escrito(String origen, String titulo, String autor, int paginas) {
 		super(origen);
 		this.titulo = titulo;
 		this.autor = autor;
 		this.paginas = paginas;
-		this.resumen = resumen;
 	}
-
-	public String getResumen() {
-        return resumen;
-    }
-
-    public void setResumen(String resumen) {
-        this.resumen = resumen;
-    }
 	
 	public String getTitulo() {
 		return titulo;
