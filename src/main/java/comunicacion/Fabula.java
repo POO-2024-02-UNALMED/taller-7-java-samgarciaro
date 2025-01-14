@@ -1,20 +1,30 @@
 package comunicacion;
 
-public class Fabula extends Escrito {
-    private String ensenanzas;
-    private String interpretacion;
+public class Fabula {
+    private String origen;
+    private String titulo;
+    private String autor;
+    private int paginas;
+    private String resumen;
+    private String idea;
+    private String ensenanza;
 
-    // Constructor
-    public Fabula(String origen, String titulo, String autor, int paginas, String resumen, String ensenanzas, String interpretacion) {
-        super(origen, titulo, autor, paginas, resumen); // Calling parent constructor
-        this.ensenanzas = ensenanzas;
-        this.interpretacion = interpretacion;
+    public Fabula(String origen, String titulo, String autor, int paginas, String resumen, String idea, String ensenanza) {
+        this.origen = origen;
+        this.titulo = titulo;
+        this.autor = autor;
+        this.paginas = paginas;
+        this.resumen = resumen;
+        this.idea = idea;
+        this.ensenanza = ensenanza;
     }
 
-    // Getter for ensenanzas
-    public String getEnsenanzas() {
-        return ensenanzas;
+    // Getters and Setters (if needed)
+    public String getEnsenanza() {
+        return ensenanza;
     }
+}
+
 
     // Setter for ensenanzas
     public void setEnsenanzas(String ensenanzas) {

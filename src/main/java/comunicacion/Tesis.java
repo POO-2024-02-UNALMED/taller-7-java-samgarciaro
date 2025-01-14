@@ -1,8 +1,12 @@
 package comunicacion;
 
-import comunicacion.Escrito;
 
-public class Tesis extends Escrito {
+public class Tesis {
+    private String origen;
+    private String titulo;
+    private String autor;
+    private int paginas;
+    private String resumen;
     private String idea;
     private String[] argumentos;
     private String conclusion;
@@ -11,9 +15,13 @@ public class Tesis extends Escrito {
 
     // Constructor
     public Tesis(String origen, String titulo, String autor, int paginas, String resumen, String idea, String[] argumentos, String conclusion, String referencias, String interpretacion) {
-        super(origen, titulo, autor, paginas, resumen); // Calling the parent constructor
+        this.origen = origen;
+        this.titulo = titulo;
+        this.autor = autor;
+        this.paginas = paginas;
+        this.resumen = resumen;
         this.idea = idea;
-        this.argumentos = (argumentos != null) ? argumentos : new String[0]; // Avoid null arrays
+        this.argumentos = argumentos;
         this.conclusion = conclusion;
         this.referencias = referencias;
         this.interpretacion = interpretacion;

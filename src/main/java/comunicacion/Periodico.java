@@ -1,16 +1,25 @@
 package comunicacion;
 
-public class Periodico extends Escrito {
+public class Periodico {
+    private String origen;
+    private String titulo;
+    private String autor;
+    private int paginas;
     private String fecha;
-    private String primicia;
-    private String interpretacion;
+    private String tema;
+    private String resumen;
+    private String tipo;
 
     // Constructor
-    public Periodico(String origen, String titulo, String autor, int paginas, String resumen, String fecha, String primicia, String interpretacion) {
-        super(origen, titulo, autor, paginas, resumen); // Calling the parent constructor
+    public Periodico(String origen, String titulo, String autor, int paginas, String fecha, String tema, String resumen, String tipo) {
+        this.origen = origen;
+        this.titulo = titulo;
+        this.autor = autor;
+        this.paginas = paginas;
         this.fecha = fecha;
-        this.primicia = primicia;
-        this.interpretacion = interpretacion;
+        this.tema = tema;
+        this.resumen = resumen;
+        this.tipo = tipo;
     }
 
     // Getter for fecha (date)
