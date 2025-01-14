@@ -14,11 +14,11 @@ public class Libro extends Escrito {
         this.interpretacion = interpretacion;
     }
 
-    public String getCoAutor() {
+    public String getCo_autor() {
         return coAutor;
     }
 
-    public void setCoAutor(String coAutor) {
+    public void setCo_autor(String coAutor) {
         this.coAutor = coAutor;
     }
 
