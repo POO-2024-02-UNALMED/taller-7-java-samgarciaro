@@ -3,7 +3,6 @@ package comunicacion;
 import comunicacion.Escrito;
 
 public class Fabula extends Escrito {
-    super(titulo, autor, paginas, resumen);
     private String ensenanzas;
     private String interpretacion;
 
