@@ -9,15 +9,17 @@ public class Tesis extends Escrito {
     private String referencias;
     private String interpretacion;
 
+    // Constructor
     public Tesis(String origen, String titulo, String autor, int paginas, String resumen, String idea, String[] argumentos, String conclusion, String referencias, String interpretacion) {
-        super(origen, titulo, autor, paginas, resumen);
+        super(origen, titulo, autor, paginas, resumen); // Calling the parent constructor
         this.idea = idea;
-        this.argumentos = argumentos;
+        this.argumentos = (argumentos != null) ? argumentos : new String[0]; // Avoid null arrays
         this.conclusion = conclusion;
         this.referencias = referencias;
         this.interpretacion = interpretacion;
     }
 
+    // Getter and Setter methods
     public String getIdea() {
         return idea;
     }
@@ -31,7 +33,7 @@ public class Tesis extends Escrito {
     }
 
     public void setArgumentos(String[] argumentos) {
-        this.argumentos = argumentos != null ? argumentos : new String[0];
+        this.argumentos = (argumentos != null) ? argumentos : new String[0]; // Avoid null arrays
     }
 
     public String getConclusion() {
@@ -50,22 +52,45 @@ public class Tesis extends Escrito {
         this.referencias = referencias;
     }
 
+    // Overridden method for calculating total words
     @Override
     public int palabrasTotales(int parametro) {
-        return super.getPaginas() * parametro * 5;
+        return super.getPaginas() * parametro * 5; // This factor should be reviewed as per your requirement
     }
 
+    // Overridden method for interpretation
     @Override
     public String interpretacion() {
         return interpretacion;
     }
 
+    // Method to get the number of arguments
     public int cantidadArgumentos() {
-        return argumentos != null ? argumentos.length : 0;
+        return (argumentos != null) ? argumentos.length : 0;
     }
 
+    // Overridden toString method for a formatted output
     @Override
     public String toString() {
-        return super.getTitulo() + "\n" + super.getAutor() + "\n" + super.getPaginas() + "\n" + super.resumen() + "\n" + idea + "\n" + conclusion + "\n" + referencias;
+        StringBuilder sb = new StringBuilder();
+        sb.append(super.getTitulo()).append("\n")
+          .append(super.getAutor()).append("\n")
+          .append(super.getPaginas()).append("\n")
+          .append(super.resumen()).append("\n")
+          .append("Idea: ").append(idea).append("\n")
+          .append("Conclusion: ").append(conclusion).append("\n")
+          .append("Referencias: ").append(referencias).append("\n")
+          .append("Argumentos: ");
+        
+        // Append each argumento if available
+        if (argumentos != null && argumentos.length > 0) {
+            for (String argumento : argumentos) {
+                sb.append(argumento).append("\n");
+            }
+        } else {
+            sb.append("No arguments provided.\n");
+        }
+        
+        return sb.toString();
     }
 }
