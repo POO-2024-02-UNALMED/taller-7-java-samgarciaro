@@ -6,8 +6,8 @@ public class Fabula extends Escrito {
     private String ensenanzas;
     private String interpretacion;
 
-    public Fabula(String titulo, String autor, int paginas, String resumen, String ensenanzas, String interpretacion) {
-        super(titulo, autor, paginas, resumen);
+    public Fabula(String origen, String titulo, String autor, int paginas, String resumen, String ensenanzas, String interpretacion) {
+        super(origen, titulo, autor, paginas, resumen);
         this.ensenanzas = ensenanzas;
         this.interpretacion = interpretacion;
     }
@@ -22,7 +22,7 @@ public class Fabula extends Escrito {
 
     @Override
     public int palabrasTotales(int parametro) {
-        return super.getPaginas * parametro * 1;
+        return super.getPaginas() * parametro * 1;
     }
 
     @Override
@@ -32,6 +32,6 @@ public class Fabula extends Escrito {
 
     @Override
     public String toString() {
-        return super.getTitulo() + "\n" + super.getAutor() + "\n" + super.getPaginas() + "\n" + resumen + "\n" + ensenanzas;
+        return super.getTitulo() + "\n" + super.getAutor() + "\n" + super.getPaginas() + "\n" + super.Resumen() + "\n" + ensenanzas;
     }
 }

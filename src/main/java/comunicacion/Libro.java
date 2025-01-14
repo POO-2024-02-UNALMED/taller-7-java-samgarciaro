@@ -6,8 +6,8 @@ public class Libro extends Escrito {
     private String edicion;
     private String interpretacion;
 
-    public Libro(String titulo, String autor, int paginas, String resumen, String coAutor, String editorial, String edicion, String interpretacion) {
-        super(titulo, autor, paginas, resumen);
+    public Libro(String origen, String titulo, String autor, int paginas, String resumen, String coAutor, String editorial, String edicion, String interpretacion) {
+        super(origen, titulo, autor, paginas, resumen);
         this.coAutor = coAutor;
         this.editorial = editorial;
         this.edicion = edicion;
@@ -40,7 +40,7 @@ public class Libro extends Escrito {
 
     @Override
     public int palabrasTotales(int parametro) {
-        return super.getPaginas * parametro * 2;
+        return super.getPaginas() * parametro * 2;
     }
 
     @Override
@@ -50,6 +50,6 @@ public class Libro extends Escrito {
 
     @Override
     public String toString() {
-        return super.getTitulo() + "\n" + super.getAutor() + "\n" + super.getPaginas() + "\n" + resumen + "\n" + coAutor + "\n" + editorial + "\n" + edicion;
+        return super.getTitulo() + "\n" + super.getAutor() + "\n" + super.getPaginas() + "\n" + super.Resumen() + "\n" + coAutor + "\n" + editorial + "\n" + edicion;
     }
 }
