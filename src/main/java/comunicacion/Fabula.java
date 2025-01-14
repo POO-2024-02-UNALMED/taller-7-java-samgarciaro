@@ -23,7 +23,7 @@ public class Fabula {
     public String getEnsenanza() {
         return ensenanza;
     }
-}
+
 
 
     // Setter for ensenanzas
